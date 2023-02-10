@@ -23,8 +23,6 @@
 
 - 👯 I’m looking to collaborate on OpenSource Projects
 
-- 👨‍💻 All of my projects are available at (https://ajayvishwakarma-a15v.vercel.app))
-
 - 💬 Ask me about React, NodeJS, HTML, CSS, Express JS, Mongo DB, Python, Java, JavaScript
 
 - 📫 Reach me Through: g2468vi@gmail.com 😄
@@ -126,7 +124,7 @@
 <br/>
 <br/>
 
-![𝚐𝚒𝚝𝚑𝚞𝚋 𝚐𝚛𝚊𝚙𝚑](https://activity-graph.herokuapp.com/graph?username=Ajay-KV&theme=gruvbox&hide_border=true&area=true)
+
 <br/>
 <br/>
 
@@ -134,4 +132,4 @@
 
 </p>
 
-**[⬆ Back to Top](#Hi-there-👋-I-am-Ajay-Vishwakarma)**
+**[⬆ Back to Top](#Hi-there-👋-I-am-Gopi-Vishwakarma)**
