@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+
+    <link rel="stylesheet" href="../styles/SiginUpPage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Poppins:wght@300;600&family=Roboto+Condensed&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="container">
+        <div id="logo">
+          <img
+            id="logo"
+            src="../logo/SR-logo.png"
+            alt="error" />
+        </div>
+        <div id="login-box">
+          <h1>Sign Up</h1>
+          <form id="form">
+            <div id="name-box">
+              <label>Name</label>
+              <input type="text" id="name" />
+            </div>
+            <div id="email-box">
+              <label>Email</label>
+              <input type="email" id="email" />
+            </div>
+            <div id="pass-box">
+              <div>
+                <div id="set">
+                  <label>Password</label>
+                </div>
+                <div id="passSet">
+                  <a href="#" id="ForgotPass">more than 8 character</a>
+                </div>
+              </div>
+              <input type="password" id="password" />
+            </div>
+            <div id="signin-btn">
+              <input type="submit" value="Sign Up" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../scripts/SiginUpPage.js"></script>
+</html>

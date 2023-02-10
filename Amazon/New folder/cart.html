@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./cart.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+    <header id="Headersection">
+        <div class="nav-belt" id="nav-belts">
+            <div class="image-section">
+               <a href="./index.html"> <img src="./logo6.png" alt="companylogo"></a>
+            </div>
+            <div class="location-section">
+                <div class="loc-logo"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                <div class="t-loc">
+                    <span style="font-size: 13px;"> Hello</span> <span id="disname"></span><br>
+                    <span style="font-size: 14px;">Select your address</span>
+                </div>
+            </div>
+          
+
+
+            <div class="search-bar">
+                <select name="products"  id="products" class="select-bar">
+                    <option value="all">All</option>
+                    <option value="AlexaSkills">Alexa Skills</option>
+                    <option value="AmazonDevices">Amazon Devices</option>
+                    <option value="AmazonFashion">Amazon Fashion</option>
+                    <option value="AmazonFresh">Amazon Fresh</option>
+                    <option value="AmazonPharmacy">Amazon Pharmacy</option>
+                    <option value="Appliance">Appliance</option>
+                    <option value="Apps&Games">Apps & Games</option>
+                    <option value="Beauty">Beauty</option>
+                    <option value="Baby">Baby</option>
+                    <option value="Books">Books</option>
+                    <option value="Car&Motorbikes">Car & Motorbikes</option>
+                    <option value="Clothing&Accessories">Clothing & Accessories</option>
+                    <option value="Collectibles">Collectibles</option>
+                    <option value="Computer&Accessories">Computer & Accessories</option>
+                    <option value="Deals">Deals</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Furnitures">Furnitures</option>
+                    <option value="Garden&Outdoors">Garden & Outdoors</option>
+                    <option value="Card&Gifts">Card & Gifts</option>
+               
+                </select>
+                <input type="text" name="" id="input-bar" class="input-bar" >
+                <span><i class="fa fa-1x fa-search" aria-hidden="true"></i></span>
+
+            </div>
+            <div class="language-section">
+                <div class="lang"><img class="Ind-image" src="data:image/png;base64,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" alt="India-logo"></div>
+              <div class="lang-sec"><span>EN</span></div>
+            </div>
+            <div class="login-orders-cart">
+                <div class="login" onmouseenter="show()" onmouseleave="hide()">
+                    <span style="font-weight: 300;">Hello,<span id="displayName"></span></span><br>
+                    <span style="font-size: 14px;">Account & Lists </span>
+                </div>
+            <div class="orders">
+                    <span style="font-weight: 300;">Returns</span><br>
+                    <span>& Orders</span>
+                </div>
+            <div>
+                <div class="cart">
+                    <div class="count">
+                        <span style="font-size: 20px; font-weight: bolder; padding-left: 15px; padding-top: -5px;"><a href="./cart.html" style="color: rgb(239, 174, 10); text-decoration: none;" id="displayCount">0</a></span>
+                    </div>
+                    <div class="cart-logo">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+   
+</header>
+<nav>
+  <div class="main-nav">
+     <div class="main-1">
+      <!-- <div class="hambuger">
+          
+      </div> -->
+     <div class="list-items">
+      <ul class="li-lists">
+          <li><i class="fa fa-bars" aria-hidden="true"></i></li>
+          <li>All</li>
+          <li>ShoppingRoom miniTV</li>
+          <li>Best Sellers</li>
+          <li>Mobiles</li>
+          <li>Today's Deals</li>
+          <li>Customer Service</li>
+          <li>Electronics </li>
+          <li>Prime</li>
+          <li>Fashion</li>
+          <li>SR Pay</li>
+      </ul>
+     </div> 
+     <div class="offerImage"><img src="https://m.media-amazon.com/images/G/31/Events/img23/JanART/SWM_400x39_Live_Now._CB615689570_.jpg" alt=""></div>
+     </div>
+  </div>
+</nav>
+<div class="Signinghover" id="Signinghover" onmouseenter="show()" onmouseleave="hide()">
+  <div>
+    <div class="outerBorder" onmouseenter="show()" onmouseleave="hide()">
+      <div class="sigin_section">
+        <a href="./SignIn.html" style="text-decoration: none;"><p class="si">Sign in</p></a>
+        <p>New Customer? <span style="color: #30a2b6; cursor: pointer; font-size: 12px; padding-bottom: 10px;"><a href="./SiginUpPage.html" style="text-decoration: none; color: #30a2b6;">Start here</a> </span></p>
+      </div>
+      <div class="ul-li">
+        <ul>
+          <li><h4>Your Lists</h4></li>
+          <li>Create a Wish List</li>
+          <li>Wish from Any Website</li>
+          <li>Baby Wishlist</li>
+          <li>Discover Your Style</li>
+          <li>Explore Showroom</li>
+        </ul>
+        <ul>
+          <li><h4>Your Account</h4></li>
+          <li>Your Account</li>
+          <li>Your Orders</li>
+          <li>Your Wish List</li>
+          <li>Your Recommendations</li>
+          <li>Your Prime Membership</li>
+          <li>Your Prime Video</li>
+          <li>Your Subscribe & Save Items</li>
+          <li>Memberships & Subscriptions</li>
+          <li>Your Amazon Business Account</li>
+          <li>Your Seller Account</li>
+          <li>Manage Your Content and Devices</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+<section class="">
+    <div id="warning-message">
+        <h3 style="padding: 20px;">important message for your item in your cart</h3>
+        <h4 style="padding-left:20px;">one free item will we added in your cart</h4>
+        <p style="padding-left: 20px;">..Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi debitis quidem, dolor ullam soluta architecto maiores, consequatur temporibus quae reprehenderit fugit minima earum, doloremque aperiam incidunt exercitationem reiciendis commodi sit voluptatum? A inventore necessitatibus nostrum perspiciatis hic repellendus commodi iste deleniti quidem voluptates incidunt dolores cupiditate possimus animi harum deserunt esse, vel corrupti optio in ipsa non sunt? Doloremque.</p></div>
+        <!-- middle page html content  -->
+    <div id="main-page">
+        <div id="item-div">
+            <div id="item-container">
+                <div id="top"><h1 style="padding: 15px 15px 10px 15px;"><span id="disMessage">Shopping Cart</span></h1><a href="" style="padding-left: 20px;">Deselect all item</a><p style="text-align: right; padding-right: 20px;">Price</p></div>
+                <hr>
+               
+                <div id="middle">
+                    <!-- append your data here from localstrage -->
+                </div>
+               <hr>
+                <div id="bottom"><h2 style="font-size: 18px; font-weight: 100;letter-spacing: 1px; padding-top: 5px;">Subtotal (<span id="total-count">0</span> item): <b><span id="total-price">0.00</span></b></h2></div>
+            </div>
+            <!-- save for later page ==========================================-->
+            <div id="your-item-page">
+                <div id="your-item">
+                    <h2 style="padding: 15px 0px 15px 15px;">Your Item</h2>
+                    <div><p id="underline" style="text-decoration: none;">Saved for later (<span id="counter" style="color: #30a2b6;">0</span> items)</p><p>Buy It Again</p></div>
+                </div>
+                <hr color="lightgray">
+                <div id="save-item-later">
+                  <!-- append all data which user want to put save later  -->
+                </div>
+            </div>
+        </div>
+        <!-- ===================================payment page  -->
+        <div id="payment-page">
+            <div id="payment-div">
+                <div>
+                    <div id="icon-div"><i class="fa-solid fa-square-check" style="color:green;"></i>
+                    <span>Your order is eligible for FREE Delivery. <span style="color: black;">Select this option at</span> <a href="" a="" style="text-decoration: none; color: #30a2b6;">Details</a></span></div>
+                    <h4 style="padding-top: 25px; font-weight: 100; font-size: 23px;">Subtotal (<span id="total-item">0</span> item): <b><span id="total-value" style="line-height: 1.5;"> <br> 0.00</span></b></h4>
+
+                    <div style="margin-top: 7px;"><input type="checkbox" name="" id="">
+                    <span>This order contains a gift</span></div>
+                    <button id="proceed-button">Proceed to Buy</button>
+                    <!-- ====================ACCORDION============ -->
+                    <button class="accordion">EMI Available<p style="font-size: 20px;">+</p></button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.saepe omnis ad suscipit ducimus quas aspernatur, itaque neque cupiditate nam amet asperiores dolore.</p>
+                        </div>
+                </div>                
+            </div>
+            <!-- ====================reference page ================= -->
+            <div id="reference-div">
+                <b style="display: block; padding: 15px 0px 5px 15px;">Products related to items in your cart</b>
+                <p style="font-size: 15px; color: darkcyan; padding-left: 15px;">Sponsored</p>
+                <!-- ================================= -->
+                <div>
+                    <div id="div-1"><img src="https://m.media-amazon.com/images/I/51CLh4ITZ6L._AC_SR200,200_.jpg" alt=""></div>
+                    <div id="div-2">
+                        <a href="#">Water Purifiers...</a>
+                        <div>
+                            <i class="fa fa-star" style="color: orange;"></i>
+                            <i class="fa fa-star" style="color: orange;"></i>
+                            <i class="fa fa-star" style="color: orange;"></i>
+                            <i class="fa fa-star" style="color: orange;"></i>
+                            <i class="fa fa-star" style="color: rgb(202, 200, 194);;"></i>
+                        </div>
+                        <p>4,893</p>
+                        <p>7,999.00</p>
+                        <button>see all buying option</button>
+                    </div>
+                </div>
+                <!-- ================================== -->
+                <div>
+                    <div id="div-1"><img src="https://m.media-amazon.com/images/I/614faaVFLTL._AC_SR200,200_.jpg" alt=""></div>
+                    <div id="div-2">
+                        <a href="#">Battery...</a>
+                        <div>
+                            <i class="fa fa-star" style="color: orange;"></i>
+                            <i class="fa fa-star" style="color: orange;"></i>
+                            <i class="fa fa-star" style="color: orange;"></i>
+                            <i class="fa fa-star" style="color: orange;"></i>
+                            <i class="fa fa-star" style="color: rgb(202, 200, 194);;"></i>
+                        </div>
+                        <p>4,893</p>
+                        <p>7,999.00</p>
+                        <button>see all buying option</button>
+                    </div>
+                </div>
+                <!-- ================================== -->
+                <div>
+                    <div id="div-1"><img src="https://m.media-amazon.com/images/I/71qZERyxy6L._AC_AA220_.jpg" alt=""></div>
+                    <div id="div-2">
+                        <a href="#">Samsung Galaxy...</a>
+                        <div>
+                            <i class="fa fa-star" style="color: orange;"></i>
+                            <i class="fa fa-star" style="color: orange;"></i>
+                            <i class="fa fa-star" style="color: orange;"></i>
+                            <i class="fa fa-star" style="color: orange;"></i>
+                            <i class="fa fa-star" style="color: rgb(202, 200, 194);;"></i>
+                        </div>
+                        <p>4,893</p>
+                        <p>7,999.00</p>
+                        <button>see all buying option</button>
+                    </div>
+                </div>
+                <!-- ================================== -->
+                <div>
+                    <div id="div-1"><img src="https://m.media-amazon.com/images/I/51eknlIYz-L._AC_SR200,200_.jpg" alt=""></div>
+                    <div id="div-2">
+                        <a href="#">kit...</a>
+                        <div>
+                            <i class="fa fa-star" style="color: orange;"></i>
+                            <i class="fa fa-star" style="color: orange;"></i>
+                            <i class="fa fa-star" style="color: orange;"></i>
+                            <i class="fa fa-star" style="color: orange;"></i>
+                            <i class="fa fa-star" style="color: rgb(202, 200, 194);"></i>
+                        </div>
+                        <p>4,893</p>
+                        <p>7,999.00</p>
+                        <button style="margin-bottom: 30px;">see all buying option</button>
+                    </div>
+                </div>
+                <!-- ================================== -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- footer part from here  -->
+<section class="back-to-top"><a href="#">Back to top</a></section>
+    <footer >
+        <div class="footer-sec-1">
+            <div class="footer-sec-2">
+                <div class="ft-sec3">
+                    <ul>
+                        <li> <h3>Get to Know Us</h3></li>
+                        <li>About Us</li>
+                        <li>Careers</li>
+                        <li>Press Release</li>
+                        <li>Amazon Science</li>
+                    </ul>
+                </div>
+                <div class="ft-sec3">
+                   
+                    <ul>
+                        <li> <h3>Connect with Us</h3></li>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                    </ul>
+                </div>
+                <div class="ft-sec3">
+                   
+                    <ul>
+                    <li> <h3>Make Money with Us</h3></li>
+                    <li>Sell on Shopping Room</li>
+                    <li>Sell under Amazon Accelerator</li>
+                    <li>Protect and Build Your Brand</li>
+                    <li>ShoppingRoom Global Selling</li>
+                    <li>Become an Affiliate</li>
+                    <li>Fulfilment by Amazon</li>
+                    <li>Advertise Your Products</li>
+                    <li>SR Pay on Merchants</li>
+                </ul>
+                </div>
+                <div class="ft-sec3">
+                 
+                    <ul>
+                        <li>  <h3>Let Us Help You</h3></li>
+                        <li>COVID-19 and ShoppingRoom</li>
+                        <li>Your Account</li>
+                        <li>Returns Centre</li>
+                        <li>100% Purchase Protection</li>
+                        <li>Shopping Room App Download</li>
+                        <li>Shopping Room Assistant Download</li>
+                        <li>Help</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="language-section-1">
+            <div class="img-globe">
+                    <div class="img-lang">
+                        <img src="./logo6.png" alt="">
+                    </div>
+                    <div class="glogo">
+                        <i class="fa fa-globe" aria-hidden="true"></i> <span style="padding: 10px;">English</span> 
+                    </div>
+            </div> 
+    </div>
+    <div class="cont-sec">
+       <div class="countries">
+        <p style="padding-bottom: 20px; ">
+            Australia Brazil Canada China France Germany Italy Japan Mexico Netherlands Poland
+    Singapore Spain Turkey United Arab Emirates United Kingdom United States
+        </p>
+       </div>
+     </div>  
+    
+    
+    <div class="footer-sec-4">
+        <div class="footer-sec-5">
+            <div class="footer-sec-6">
+                <div class="footer-sec-6-1">
+                    <ul>
+                        <li><h4>AbeBooks</h4></li>
+                        <li>Books, art</li>
+                        <li>& collectibles</li>
+                    </ul>
+                </div>
+                <div class="footer-sec-6-1">
+                    <ul>
+                        <li><h4>Shopping Room Web Services</h4></li>
+                        <li>Scalable Cloud</li>
+                        <li>Computing Services</li>
+                    </ul>
+                </div>
+                <div class="footer-sec-6-1">
+                    <ul>
+                        <li><h4>Audible</h4></li>
+                        <li>Download</li>
+                        <li>Audio Books	</li>
+                    </ul>
+                </div>
+                <div class="footer-sec-6-1">
+                    <ul>
+                        <li><h4>DPReview</h4></li>
+                        <li>Digital</li>
+                        <li>Photography	</li>
+                    </ul>
+                </div>
+                <div class="footer-sec-6-1">
+                    <ul>
+                        <li><h4>IMDb</h4></li>
+                        <li>Movies, TV</li>
+                        <li>& Celebrities</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-sec-6">
+                <div class="footer-sec-6-1">
+                    <ul>
+                        <li><h4>Shopbop</h4></li>
+                        <li>Designer</li>
+                        <li>Fashion Brands</li>
+                    </ul>
+                </div>
+                <div class="footer-sec-6-1">
+                    <ul>
+                        <li><h4>SR Business</h4></li>
+                        <li>Everything For</li>
+                        <li>Your Business</li>
+                    </ul>
+                </div>
+                <div class="footer-sec-6-1">
+                    <ul>
+                        <li><h4>Prime Now</h4></li>
+                        <li>2-Hour Delivery</li>
+                        <li>on Everyday Items</li>
+                    </ul>
+                </div>
+                <div class="footer-sec-6-1">
+                    <ul>
+                        <li><h4>Shopping Room Prime Music</h4></li>
+                        <li>90 million songs, ad-free</li>
+                        <li>Over 15 million podcast episodes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="copyright">
+            <div class="copyright-1">
+                <p>
+                    Conditions of Use & Sale Privacy Notice Interest-Based Ads © 1996-2023, Shopping Room.com, Inc. or its affiliates
+                </p>
+            </div>
+            </div>
+    </div>
+    </footer>   
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> 
+</body>
+<script src="./cart.js"></script>
+</html>
+
+

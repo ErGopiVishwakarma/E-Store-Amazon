@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="shortcut icon" href="./download.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Poppins:wght@300;600&family=Roboto+Condensed&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <section id="sideBar">
+      <div id="sideBox">
+        <ul>
+          <li>
+            <div id="adminLogo">
+              <i class="fa-solid fa-user"></i>
+              <h3>Hello Shankar</h3>
+            </div>
+          </li>
+          <div id="anchorP">
+            <li><a href="./dashboard.html" id="dash">DashBoard</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="./product.html" id="pro">Add Products</a></li>
+            <li><a href="./buyer.html">Buyer</a></li>
+            <li><a href="./customer.html">Customer</a></li>
+            <li><a href="#">Invoices</a></li>
+            <li><a href="./admin.html">Logout</a></li>
+          </div>
+        </ul>
+      </div>
+    </section>
+
+    <header id="header">
+      <nav id="nav">
+        <div id="ham-burger">
+          <i class="fa-solid fa-bars" id="burger"></i>
+        </div>
+        <div id="searchDiv">
+          <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search" id="search" />
+        </div>
+      </nav>
+    </header>
+    <div id="SecondContainer">
+      <div id="Bejoz">
+        <img
+          id="bejo"
+          src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781982132620/amazon-unbound-9781982132620_hr.jpg"
+          alt="" />
+      </div>
+      <section id="DashBoardDiv">
+        <div id="GraphBox">
+          <div class="box1">
+            <canvas id="myChart"></canvas>
+          </div>
+          <div class="box2">
+            <canvas id="myChart1"></canvas>
+          </div>
+        </div>
+
+        <div id="btmContainer">
+          <div class="btmbox">
+            <h3>Total Products</h3>
+            <div>
+              <h1 id="totalProducts">400</h1>
+            </div>
+          </div>
+          <div class="btmbox">
+            <h3>Total Sales</h3>
+            <div>
+              <h1>400</h1>
+            </div>
+          </div>
+          <div class="btmbox">
+            <h3>Total Customer</h3>
+            <div>
+              <h1 id="CustomerBox">400</h1>
+            </div>
+          </div>
+          <div class="btmbox">
+            <h3>Total Orders</h3>
+            <div>
+              <h1 id="order">400</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js"></script>
+  <script src="dashboard.js"></script>
+</html>

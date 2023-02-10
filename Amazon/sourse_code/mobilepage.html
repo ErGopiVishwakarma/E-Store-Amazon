@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile page</title>
+    <link rel="stylesheet" href="../styles/mobilepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+<body>
+    <header id="Headersection">
+        <div class="nav-belt" id="nav-belts">
+            <div class="image-section">
+              <a href="./index.html">  <img src="../logo/logo6.png" alt="companylogo"></a>
+            </div>
+            <div class="location-section">
+                <div class="loc-logo"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                <div class="t-loc">
+                    <span style="font-size: 13px; color: rgb(198, 197, 197);"> Hello</span> <span id="disname" style=" color: rgb(198, 197, 197);"></span><br>
+                    <span style="font-size: 14px;">Select your address</span>
+                </div>
+            </div>
+          
+<img src="" alt="">
+
+            <div class="search-bar">
+                <select name="products"  id="products" class="select-bar">
+                    <option value="all">All</option>
+                    <option value="AlexaSkills">Alexa Skills</option>
+                    <option value="AmazonDevices">Amazon Devices</option>
+                    <option value="AmazonFashion">Amazon Fashion</option>
+                    <option value="AmazonFresh">Amazon Fresh</option>
+                    <option value="AmazonPharmacy">Amazon Pharmacy</option>
+                    <option value="Appliance">Appliance</option>
+                    <option value="Apps&Games">Apps & Games</option>
+                    <option value="Beauty">Beauty</option>
+                    <option value="Baby">Baby</option>
+                    <option value="Books">Books</option>
+                    <option value="Car&Motorbikes">Car & Motorbikes</option>
+                    <option value="Clothing&Accessories">Clothing & Accessories</option>
+                    <option value="Collectibles">Collectibles</option>
+                    <option value="Computer&Accessories">Computer & Accessories</option>
+                    <option value="Deals">Deals</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Furnitures">Furnitures</option>
+                    <option value="Garden&Outdoors">Garden & Outdoors</option>
+                    <option value="Card&Gifts">Card & Gifts</option>
+               
+                </select>
+                <input type="text" name="" id="input-bar" class="input-bar">
+               
+                <span><i class="fa fa-1x fa-search" aria-hidden="true"></i></span>
+
+            </div>
+            <div class="language-section">
+                <div class="lang"><img class="Ind-image" src="data:image/png;base64,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" alt="India-logo"></div>
+              <div class="lang-sec"><span>EN</span></div>
+            </div>
+            <div class="login-orders-cart">
+                <div class="login" onmouseenter="show()" onmouseleave="hide()">
+                    <span style="font-weight: 300; color: rgb(198, 197, 197);">Hello,<span id="displayName" style="color: rgb(198, 197, 197);"></span></span><br>
+                    <span style="font-size: 14px;">Account & Lists </span>
+                </div>
+            <div class="orders">
+                    <span style="font-weight: 300;">Returns</span><br>
+                    <span>& Orders</span>
+                </div>
+            <div>
+                <div class="cart">
+                    <div class="count">
+                       <a href="./cart.html" style="color: orange; text-decoration: none;"> <span style="font-size: 20px; font-weight: bolder; padding-left: 15px; padding-top: -5px;"><span id="displayCount">0</span></span></a>
+                    </div>
+                    <div class="cart-logo">
+                        <a href="../sourse_code/cart.html" style="color: white; cursor: pointer;"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+   
+</header>
+<nav>
+    <div class="main-nav">
+       <div class="main-1">
+        <!-- <div class="hambuger">
+            
+        </div> -->
+       <div class="list-items">
+        <ul class="li-lists">
+            <li><i class="fa fa-bars" aria-hidden="true"></i></li>
+            <li>All</li>
+            <li>ShoppingRoom miniTV</li>
+            <li>Best Sellers</li>
+            <li>Mobiles</li>
+            <li>Today's Deals</li>
+            <li>Customer Service</li>
+            <li> Electronics </li>
+            <li>Prime</li>
+            <li>Fashion</li>
+            <li>SR Pay</li>
+        </ul>
+       </div> 
+       <div class="offerImage"><img src="https://m.media-amazon.com/images/G/31/Events/img23/JanART/SWM_400x39_Live_Now._CB615689570_.jpg" alt=""></div>
+       </div>
+    </div>
+  </nav>
+
+<!-- filter menu starts here -->
+<div id="product_no">
+    <p style="padding-left: 30px;">1-16 of over 8,000 results for <span id="laptop">"mobiles"</span></p>
+    <select id="sort" style=" border-radius: 50px; text-align: center; padding: -20px; border: 0px solid gray;" >
+        <option value="" name="">Sort by :Featured</option>
+        <option value="dsc" name="">Price: High to Low</option>
+        <option value="asc" name="">Price: Low to High</option>
+        <option value="dsc_rating" name="">Average: Customer Rating</option>
+    </select>
+</div>
+<br/>
+<div id="product_page"  style="padding-left: 30px;">
+      <!-- filter-menu -->
+    <div id="filter_bar">
+         <!-- Delivery date -->
+        <div class="checkbox" id="deliverbyday">
+                    <p>Delivery Day</p>
+                    <input type ="checkbox" value="1">Get it Today</input>
+                    <br/>
+                    <input type ="checkbox" value="2">Get it by Tomorrow</input>
+                    <br/>
+                    <input type ="checkbox" value="3">Get it in 2 days</input>
+                    <br/>
+        </div>
+
+        <!-- Filter Category -->
+        <div class="filter_category" id="category">
+                    <p>Category</p>
+                    <p>laptop</p>
+                    <p>Traditional Laptops</p>
+        </div>
+        <!-- Customer Review -->
+        <div class="customer_review" id="review">
+            <p>Customer Review</p>
+            <div class="star1" id="star"><span>&#9733&#9733&#9733&#9733&#9734</span> & Up</div>
+            <div class="star2" id="star"><span>&#9733&#9733&#9733&#9734&#9734</span> & Up</div>
+            <div class="star3" id="star"><span>&#9733&#9733&#9734&#9734&#9734</span> & Up</div>
+            <div class="star4" id="star"><span>&#9733&#9734&#9734&#9734&#9734</span> & Up</div>
+            <!-- solid star &#9733 -->
+            <!-- half star   &#xf123 -->
+            <!-- empty star &#9734 -->
+
+          
+        </div>
+        <!-- Brand -->
+        <div class="checkbox" id="brand">
+                    <p>Brand</p>
+                    <input type ="checkbox" value="1">HP</input>
+                    <br/>
+                    <input type ="checkbox" value="2">ASUS</input>
+                    <br/>
+                    <input type ="checkbox" value="3">Lenevo</input>
+                    <br/>
+                    <input type ="checkbox" value="4">Acer</input>
+                    <br/>
+                    <input type ="checkbox" value="5">Dell</input>
+                    <br/>
+                    <input type ="checkbox" value="6">Honor</input>
+                    <br/>
+                    <input type ="checkbox" value="7">MI</input>
+                    <br/>
+        </div>
+        <!-- Price -->
+        <div class="price" id="price" style="line-height: 1.5;">
+             <p>Price Desktop</p>
+             <div id="under_15">Under ₹1,500</div>
+             <div id="15-20">₹1,500 - ₹2,000</div>
+             <div id="20-40">₹2,000 - ₹4,000</div>
+             <div id="40-50">₹4,000 - ₹5,000</div>
+             <div id="over_50">Over ₹5,000</div>
+             <br/>
+             <input type="number" name="max" id="max" placeholder="₹ Min">
+             <input type="number" name="min" id="min" placeholder="₹ Max">
+             <button id="go_btn">Go</button>
+        </div>
+    </div>
+    
+<!-- filter menu ends here -->
+
+<!-- Product card starts here -->
+    <!-- product description -->
+     <div id="product_div">
+        <!-- <div id="product_card">
+           <div id="product_image">
+              <img src="https://m.media-amazon.com/images/I/81zoyHn5uJL._AC_UY218_.jpg">
+           </div>
+           <div id="product_desc">
+            <h4 id="product_name">HP 14s, 11th Gen Intel Core i3-1115G4, 8GB RAM/256GB SSD 14-inch(35.6 cm) Micro-Edge, Anti-Glare, FHD Laptop/Alexa Built-in/Win 11/Intel UHD Graphics/Dual Speakers/ MSO 2021/1.41 Kg, 14s-dy2507TU</h4>
+            <p id="star"><span>&#9733&#9733&#9733&#9733&#9734</span></p>
+            <span id="sale">Republic Day Sale</span>
+            <h3 id="price"><span>₹</span>34,900</h3>
+            <p id="time">Get it as soon as <span>Today 4 PM - 8 PM</span></p>
+            <p id="delivery">FREE Delivery by Amazon</p>
+            <p id="alexa">Alexa Built-in</p>
+            <p id="service">Available Services: Device Set-up</p>
+           </div>
+    </div> -->
+    </div> 
+    
+
+</div>
+
+<div class="pagination">
+    <div id="pagination-wrapper">
+        <button>1</button>
+    </div>
+</div>
+<!-- Product card ends here -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="Signinghover" id="Signinghover" onmouseenter="show()" onmouseleave="hide()">
+    <div>
+      <div class="outerBorder" onmouseenter="show()" onmouseleave="hide()">
+        <div class="sigin_section">
+          <a href="./SignIn.html" style="text-decoration: none;"><p class="si">Sign in</p></a>
+          <p>New Customer? <span style="color: #30a2b6; cursor: pointer; font-size: 12px;"><a href="./SiginUpPage.html" style="text-decoration: none; color: #30a2b6;">Start here</a> </span></p>
+        </div>
+        <div class="ul-li">
+          <ul>
+            <li><h4>Your Lists</h4></li>
+            <li>Create a Wish List</li>
+            <li>Wish from Any Website</li>
+            <li>Baby Wishlist</li>
+            <li>Discover Your Style</li>
+            <li>Explore Showroom</li>
+            <li id="logout">Logout</li>
+          </ul>
+          <ul>
+            <li><h4>Your Account</h4></li>
+            <li>Your Account</li>
+            <li>Your Orders</li>
+            <li>Your Wish List</li>
+            <li>Your Recommendations</li>
+            <li>Your Prime Membership</li>
+            <li>Your Prime Video</li>
+            <li>Your Subscribe & Save Items</li>
+            <li>Memberships & Subscriptions</li>
+            <li>Your Amazon Business Account</li>
+            <li>Your Seller Account</li>
+            <li>Manage Your Content and Devices</li>
+          </ul>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="signin-section">
+    <div class="signin-section-1">
+        <div>
+            <p>See personalized recommendations</p>
+   
+        </div>
+        <div class="sig-in-1">
+            <a href="./SignIn.html"><p class="sig-in" >Sign in</p></a>
+        </div>
+        <div>
+            <p>New customer? <a href="./SiginUpPage.html" style="text-decoration: none; color: black;"><span style="color: #30a2b6;">Start here.</span></a></p>
+        </div>
+    </div>
+</div>
+<section class="back-to-top"><a href="#">Back to top</a></section>
+<footer>
+    <div class="footer-sec-1">
+        <div class="footer-sec-2">
+            <div class="ft-sec3">
+                <ul>
+                    <li> <h3>Get to Know Us</h3></li>
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Press Release</li>
+                    <li>Amazon Science</li>
+                </ul>
+            </div>
+            <div class="ft-sec3">
+               
+                <ul>
+                    <li> <h3>Connect with Us</h3></li>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                </ul>
+            </div>
+            <div class="ft-sec3">
+               
+                <ul>
+                <li> <h3>Make Money with Us</h3></li>
+                <li>Sell on Shopping Room</li>
+                <li>Sell under Amazon Accelerator</li>
+                <li>Protect and Build Your Brand</li>
+                <li>ShoppingRoom Global Selling</li>
+                <li>Become an Affiliate</li>
+                <li>Fulfilment by Amazon</li>
+                <li>Advertise Your Products</li>
+                <li>SR Pay on Merchants</li>
+            </ul>
+            </div>
+            <div class="ft-sec3">
+             
+                <ul>
+                    <li>  <h3>Let Us Help You</h3></li>
+                    <li>COVID-19 and ShoppingRoom</li>
+                    <li>Your Account</li>
+                    <li>Returns Centre</li>
+                    <li>100% Purchase Protection</li>
+                    <li>Shopping Room App Download</li>
+                    <li>Shopping Room Assistant Download</li>
+                    <li>Help</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+<div class="language-section-1">
+        <div class="img-globe">
+                <div class="img-lang">
+                    <img src="../logo/logo6.png" alt="">
+                </div>
+                <div class="glogo">
+                    <i class="fa fa-globe" aria-hidden="true"></i> <span style="padding: 10px;">English</span> 
+                </div>
+        </div> 
+</div>
+<div class="cont-sec">
+   <div class="countries">
+    <p>
+        Australia Brazil Canada China France Germany Italy Japan Mexico Netherlands Poland
+Singapore Spain Turkey United Arab Emirates United Kingdom United States
+    </p>
+   </div>
+ </div>  
+
+
+<div class="footer-sec-4">
+    <div class="footer-sec-5">
+        <div class="footer-sec-6">
+            <div class="footer-sec-6-1">
+                <ul>
+                    <li><h4>AbeBooks</h4></li>
+                    <li>Books, art</li>
+                    <li>& collectibles</li>
+                </ul>
+            </div>
+            <div class="footer-sec-6-1">
+                <ul>
+                    <li><h4>Shopping Room Web Services</h4></li>
+                    <li>Scalable Cloud</li>
+                    <li>Computing Services</li>
+                </ul>
+            </div>
+            <div class="footer-sec-6-1">
+                <ul>
+                    <li><h4>Audible</h4></li>
+                    <li>Download</li>
+                    <li>Audio Books	</li>
+                </ul>
+            </div>
+            <div class="footer-sec-6-1">
+                <ul>
+                    <li><h4>DPReview</h4></li>
+                    <li>Digital</li>
+                    <li>Photography	</li>
+                </ul>
+            </div>
+            <div class="footer-sec-6-1">
+                <ul>
+                    <li><h4>IMDb</h4></li>
+                    <li>Movies, TV</li>
+                    <li>& Celebrities</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-sec-6">
+            <div class="footer-sec-6-1">
+                <ul>
+                    <li><h4>Shopbop</h4></li>
+                    <li>Designer</li>
+                    <li>Fashion Brands</li>
+                </ul>
+            </div>
+            <div class="footer-sec-6-1">
+                <ul>
+                    <li><h4>SR Business</h4></li>
+                    <li>Everything For</li>
+                    <li>Your Business</li>
+                </ul>
+            </div>
+            <div class="footer-sec-6-1">
+                <ul>
+                    <li><h4>Prime Now</h4></li>
+                    <li>2-Hour Delivery</li>
+                    <li>on Everyday Items</li>
+                </ul>
+            </div>
+            <div class="footer-sec-6-1">
+                <ul>
+                    <li><h4>Shopping Room Prime Music</h4></li>
+                    <li>90 million songs, ad-free</li>
+                    <li>Over 15 million podcast episodes</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom">
+    <div class="copyright">
+        <div class="copyright-1">
+            <p>
+                Conditions of Use & Sale Privacy Notice Interest-Based Ads © 1996-2023, Shopping Room.com, Inc. or its affiliates
+            </p>
+        </div>
+        </div>
+</div>
+</footer>
+
+
+
+
+</body>
+<script src="../scripts/mobileproduct.js"></script>
+</html>

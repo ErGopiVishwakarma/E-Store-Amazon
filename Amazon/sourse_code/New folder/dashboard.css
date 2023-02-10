@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+:root {
+  --grey: #232f3e;
+  --whilte: #fff;
+  --orange: #ff9529;
+}
+/* Nav Bar */
+#nav {
+  background-color: var(--grey);
+  padding: 25px 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: 0.5s ease-in-out;
+  height: 100px;
+  z-index: 10;
+}
+#burger {
+  padding: 10px;
+}
+#ham-burger {
+  height: 100%;
+  margin-left: 20px;
+}
+#ham-burger i {
+  color: #fff;
+}
+#searchDiv {
+  margin-left: 12px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+#searchDiv i {
+  margin-left: 12px;
+  margin-right: 12px;
+  background-color: #fff;
+  position: relative;
+  top: 0px;
+}
+#search {
+  width: 650px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 6px 4px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+#sideBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--grey);
+  color: whitesmoke;
+  height: 100vh;
+  width: 0%;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  z-index: 10;
+}
+
+#adminLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  color: var(--blue);
+  font-size: 25px;
+}
+#adminLogo:hover {
+  transition: 0.4s ease-in-out;
+  background-color: var(--orange);
+  color: var(--whilte);
+  border-radius: 20px;
+}
+
+#sideBox ul li:nth-child(1) h3 {
+  margin-left: 18px;
+}
+#anchorP {
+  list-style: none;
+  line-height: 25px;
+  height: 100vh;
+  margin-top: 25px;
+}
+#anchorP a {
+  position: relative;
+  left: 35px;
+  text-decoration: none;
+  font-size: 25px;
+  line-height: 50px;
+  z-index: 1;
+  display: block;
+  width: 80%;
+  margin: 15px 0;
+  padding: 0 15px;
+  color: var(--whilte);
+}
+#anchorP a:hover {
+  transition: 0.3s ease-in;
+  background-image: linear-gradient(
+    to right,
+    var(--orange) 90%,
+    transparent 85%
+  );
+  border-radius: 50px;
+}
+#SecondContainer {
+  display: flex;
+  /* border: 10px solid; */
+  height: 100%;
+}
+#DashBoardDiv {
+  /* border: 1px solid; */
+  width: 0;
+  height: 100vh;
+  width: 80%;
+  position: relative;
+  top: 100px;
+  left: 0;
+  right: 0;
+}
+#Bejoz {
+  width: 20%;
+  position: relative;
+  top: 100px;
+  left: 0;
+  right: 0;
+}
+#bejo {
+  width: 100%;
+  height: 86.5%;
+}
+#GraphBox {
+  display: flex;
+}
+.box1 {
+  padding: 5px;
+  margin-left: 35px;
+  /* border: 1px solid; */
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  margin-top: 10px;
+  border-radius: 25px;
+}
+.box2 {
+  padding: 10px;
+  width: 100%;
+  margin-left: 130px;
+  margin-right: 10px;
+  margin-top: 10px;
+  /* border: 1px solid; */
+  padding: 10px 25px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  border-radius: 25px;
+}
+
+#btmContainer {
+  display: flex;
+  /* border: 1px solid; */
+  margin-left: 35px;
+  margin-right: 10px;
+  margin-top: 25px;
+  height: 275px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.btmbox {
+  height: 220px;
+  width: 220px;
+  /* border: 1px solid; */
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.btmbox h3 {
+  text-align: center;
+  color: var(--grey);
+}
+.btmbox div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid; */
+  height: 80%;
+  font-size: 35px;
+  color: var(--grey);
+}
+.btmbox:hover {
+  background-color: var(--orange);
+  transition: 0.3s ease-in-out;
+}
+#formContainer {
+  height: 100vh;
+  background-color: #232f3e;
+  color: var(--whilte);
+}
+#heading {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 25px;
+}
+.formdiv {
+  /* border: 1px solid white; */
+  /* display: flex; */
+}
+.label {
+  font-size: 25px;
+  line-height: 50px;
+  display: block;
+}
+#sub {
+  margin-top: 25px;
+  width: 90%;
+  font-size: 20px;
+  padding: 5px 3px;
+  font-weight: 600;
+  border-radius: 8px;
+  color: var(--grey);
+}
+.inp {
+  width: 90%;
+  font-size: 20px;
+  padding: 5px 3px;
+  border-radius: 8px;
+  outline: none;
+}
+.inp:hover {
+  outline: var(--orange);
+  border: 2px solid var(--orange);
+}
+#select {
+  width: 60%;
+  font-size: 20px;
+  padding: 5px 3px;
+  border-radius: 8px;
+  outline: none;
+  width: 90%;
+}

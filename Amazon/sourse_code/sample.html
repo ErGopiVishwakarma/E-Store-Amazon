@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap: 40px;
+        }
+    </style>
+</head>
+<body>
+    <button><a href="./cart.html">go to cart page</a></button>
+    <div id="outer">
+   
+    </div>
+</body>
+<script>
+    let arr=[
+
+    {
+       image:'https://images-eu.ssl-images-amazon.com/images/I/6157kr+aeaL._AC_UL160_SR160,160_.jpg',
+       price:12000,
+       color:'red',
+       size:120,
+       name:"OnePlus 10T 5G (Moonstone Black, 12GB RAM, 256GB St…"
+    },
+    {
+        image:'https://images-eu.ssl-images-amazon.com/images/I/6157kr+aeaL._AC_UL160_SR160,160_.jpg',
+        price:12000,
+        color:'red',
+        size:120,
+        name:"OnePlus 10T 5G (Moonstone Black, 12GB RAM, 256GB St…"
+     },
+     {
+        image:'https://images-eu.ssl-images-amazon.com/images/I/6157kr+aeaL._AC_UL160_SR160,160_.jpg',
+        price:12000,
+        color:'red',
+        size:120,
+        name:"OnePlus 10T 5G (Moonstone Black, 12GB RAM, 256GB St…"
+     },
+     {
+        image:'https://images-eu.ssl-images-amazon.com/images/I/6157kr+aeaL._AC_UL160_SR160,160_.jpg',
+        price:12000,
+        color:'red',
+        size:120,
+        name:"OnePlus 10T 5G (Moonstone Black, 12GB RAM, 256GB St…"
+     },
+     {
+        image:'https://images-eu.ssl-images-amazon.com/images/I/6157kr+aeaL._AC_UL160_SR160,160_.jpg',
+        price:12000,
+        color:'red',
+        size:120,
+        name:"OnePlus 10T 5G (Moonstone Black, 12GB RAM, 256GB St…"
+     },
+     {
+        image:'https://images-eu.ssl-images-amazon.com/images/I/6157kr+aeaL._AC_UL160_SR160,160_.jpg',
+        price:12000,
+        color:'red',
+        size:120,
+        name:"OnePlus 10T 5G (Moonstone Black, 12GB RAM, 256GB St…"
+     },
+     {
+        image:'https://images-eu.ssl-images-amazon.com/images/I/6157kr+aeaL._AC_UL160_SR160,160_.jpg',
+        price:12000,
+        color:'red',
+        size:120,
+        name:"OnePlus 10T 5G (Moonstone Black, 12GB RAM, 256GB St…"
+     },
+]
+           
+    let container=document.getElementById('outer')
+    let gitData=JSON.parse(localStorage.getItem('addcart'))||[]
+function saveData(itemData){
+    gitData=[]
+      itemData.forEach((element,index)=>{
+         let main=document.createElement('div')
+         main.setAttribute('id','outer')
+         let div=document.createElement('div')
+         let firstImage=document.createElement('img')
+         firstImage.setAttribute('class','img')
+         firstImage.setAttribute('src',element.image)
+         let nameh3=document.createElement('h3')
+         nameh3.innerHTML=element.name
+         let priceh4=document.createElement('h4')
+         priceh4.innerHTML="₹ "+element.price
+         let logoImg=document.createElement('img')
+         logoImg.setAttribute('src','https://m.media-amazon.com/images/G/31/marketing/fba/fba-badge_18px._CB485936079_.png')
+         let button=document.createElement('button')
+         button.innerHTML='Add to cart'
+         button.addEventListener('click',()=>{
+                gitData=JSON.parse(localStorage.getItem('addcart'))||[]
+                gitData.push(element)
+                localStorage.setItem('addcart',JSON.stringify(gitData))
+         })
+         div.append(firstImage,nameh3,priceh4,logoImg,button)
+         main.append(div)
+         container.append(main)
+   })
+   }
+   saveData(arr)
+</script>
+</html>

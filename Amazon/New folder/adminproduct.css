@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+:root {
+  --grey: #232f3e;
+  --whilte: #fff;
+  --orange: #ff9529;
+}
+/* Nav Bar */
+#nav {
+  background-color: var(--grey);
+  padding: 25px 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: 0.5s ease-in-out;
+  height: 100px;
+  z-index: 10;
+}
+#burger {
+  padding: 10px;
+}
+#ham-burger {
+  height: 100%;
+  margin-left: 20px;
+}
+#ham-burger i {
+  color: #fff;
+}
+#searchDiv {
+  margin-left: 12px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+#searchDiv i {
+  margin-left: 12px;
+  margin-right: 12px;
+  background-color: #fff;
+  position: relative;
+  top: 0px;
+}
+#search {
+  width: 650px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 6px 4px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+#sideBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--grey);
+  color: whitesmoke;
+  /* height: 100vh; */
+  width: 0%;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  z-index: 10;
+}
+
+#adminLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  color: var(--blue);
+  font-size: 25px;
+}
+#adminLogo:hover {
+  transition: 0.4s ease-in-out;
+  background-color: var(--orange);
+  color: var(--whilte);
+  border-radius: 20px;
+}
+
+#sideBox ul li:nth-child(1) h3 {
+  margin-left: 18px;
+}
+#anchorP {
+  list-style: none;
+  line-height: 25px;
+  height: 100vh;
+  margin-top: 25px;
+}
+#anchorP a {
+  position: relative;
+  left: 35px;
+  text-decoration: none;
+  font-size: 25px;
+  line-height: 50px;
+  z-index: 1;
+  display: block;
+  width: 80%;
+  margin: 15px 0;
+  padding: 0 15px;
+  color: var(--whilte);
+}
+#anchorP a:hover {
+  transition: 0.3s ease-in;
+  background-image: linear-gradient(
+    to right,
+    var(--orange) 90%,
+    transparent 85%
+  );
+  border-radius: 50px;
+}
+#SecondContainer {
+  display: flex;
+
+  height: 100vh;
+}
+#DashBoardDiv {
+  width: 80%;
+  position: relative;
+  top: 100px;
+  left: 0;
+  right: 0;
+}
+#Bejoz {
+  /* width: 20%;
+  position: relative;
+  top: 100px;
+  left: 0; */
+}
+#bejo {
+  width: 100%;
+  height: 100%;
+}
+
+#formContainer {
+  background-color: var(--grey);
+  color: var(--orange);
+}
+#heading {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 25px;
+}
+.formdiv {
+  /* border: 1px solid white; */
+  /* display: flex; */
+}
+.label {
+  font-size: 25px;
+  line-height: 50px;
+  display: block;
+  margin-left: 50px;
+  color: var(--orange);
+}
+#sub {
+  margin-top: 25px;
+  width: 90%;
+  font-size: 20px;
+  padding: 5px 3px;
+  font-weight: 600;
+  border-radius: 8px;
+  color: var(--orange);
+  margin-left: 50px;
+}
+#sub:hover {
+  background-color: var(--orange);
+  color: var(--whilte);
+  transition: 0.3s ease-in-out;
+}
+.inp {
+  width: 90%;
+  font-size: 20px;
+  padding: 5px 3px;
+  border-radius: 8px;
+  outline: none;
+  margin-left: 50px;
+}
+.inp:hover {
+  outline: var(--orange);
+  border: 2px solid var(--orange);
+}
+#select {
+  width: 60%;
+  font-size: 20px;
+  padding: 5px 3px;
+  border-radius: 8px;
+  outline: none;
+  margin-left: 50px;
+  width: 90%;
+  color: var(--orange);
+}

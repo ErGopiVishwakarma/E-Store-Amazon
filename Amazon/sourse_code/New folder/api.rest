@@ -1,0 +1,11 @@
+GET https://gorgeous-teal-dress.cyclic.app/order
+
+###
+POST  https://gorgeous-teal-dress.cyclic.app/order
+Content-Type: application/json
+
+{
+    "name":"Sagar",
+    "product":"Royal Stag",
+    "amount":"1050"    
+}
